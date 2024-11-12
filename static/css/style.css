@@ -93,11 +93,15 @@ header ul li a:hover {
 }
 
 /* Sections */
+
+/* Offset scroll for fixed header */
 section {
     padding: 2rem 0;
     text-align: center;
     margin-top: 2rem;
+    scroll-margin-top: 80px; /* Adjust based on your header height */
 }
+
 
 section h2 {
     margin-bottom: 1rem;
@@ -163,4 +167,7 @@ footer {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+#home, #about, #projects, #skills, #contact {
+    scroll-margin-top: 80px; /* Adjust as needed for each section */
 }
