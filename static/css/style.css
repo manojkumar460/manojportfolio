@@ -15,9 +15,12 @@ body {
 
 /* Logo Styling */
 .logo {
-    height: auto;
-    width: 25%;
-    border-radius: 50%;
+    height: 300px;
+    width: auto;
+
+
+    object-fit:contain;
+    border-radius: .4em;
     box-shadow: 2px 2px 8px rgba(65, 65, 65, 0.5);
 }
 
