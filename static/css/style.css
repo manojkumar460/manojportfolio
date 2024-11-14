@@ -16,11 +16,11 @@ body {
 /* Logo Styling */
 .logo {
     height: 300px;
-    width: auto;
+    width: 300px;
 
 
     object-fit:contain;
-    border-radius: .4em;
+    border-radius: 10em;
     box-shadow: 2px 2px 8px rgba(65, 65, 65, 0.5);
 }
 
