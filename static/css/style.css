@@ -138,6 +138,8 @@ section:hover {
     font-size: 18px;
 }
 #about p{
+overflow-y:scroll;
+
      width: 60%;
      height: 140px;
     border: 2px solid;
@@ -145,6 +147,10 @@ section:hover {
     color: #555;
     font-size: 18px;
      margin-left: 20%;
+}
+#about::-webkit-scrollbar{
+  
+    display: none;
 }
 #about p:hover{
    background-color: #dfdfdf;
