@@ -131,7 +131,99 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <p>If you'd like to connect, feel free to reach out!</p>
-        <a href="mailto:manoj934547@gmail.com" class="btn">Email Me</a>
+        
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .modal-content h3 {
+            margin: 0 0 15px;
+        }
+
+        .modal-content button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .confirm {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .confirm:hover {
+            background-color: #218838;
+        }
+
+        .cancel {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .cancel:hover {
+            background-color: #c82333;
+        }
+    </style>
+
+
+<section>
+    <a href="manoj934547@gmail.com" class="btn" id="mailButton">Send Email</a>
+</section>
+
+<!-- Modal Structure -->
+<div class="modal" id="emailConfirmationModal">
+    <div class="modal-content">
+        <h3>Confirm Email</h3>
+        <p>Are you sure you want to send an email to example@mail.com?</p>
+        <button class="confirm" id="confirmMail">Yes</button>
+        <button class="cancel" id="cancelMail">No</button>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle modal behavior
+    const mailButton = document.getElementById('mailButton');
+    const emailModal = document.getElementById('emailConfirmationModal');
+    const confirmMail = document.getElementById('confirmMail');
+    const cancelMail = document.getElementById('cancelMail');
+
+    mailButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        emailModal.style.display = 'flex'; // Show the modal
+    });
+
+    confirmMail.addEventListener('click', () => {
+        emailModal.style.display = 'none'; // Hide the modal
+        window.location.href = 'mailto:example@mail.com'; // Open the email client
+    });
+
+    cancelMail.addEventListener('click', () => {
+        emailModal.style.display = 'none'; // Hide the modal
+    });
+</script>
+
+
 <br>
 <br>
 
