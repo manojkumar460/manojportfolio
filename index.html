@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manoj K's Portfolio</title>
-    <link rel="stylesheet" href="static\css\style.css">
-     <link rel="icon" href="static/data/logo2.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" href="static/data/logo2.jpg" type="image/jpeg">
     <style>
-
-
-
         /* Modal styles */
         .modal {
             display: none; /* Hidden by default */
@@ -69,7 +66,6 @@
     <header>
         <h1>Manoj K</h1>
         <nav>
-            
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -93,14 +89,11 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm Manoj K, <br>an Electrical and Electronics Engineering student with <br>intermediate coding skills and experience in web design and app development.
-            <br>I've developed projects like an Amazon clone and an e-commerce site named Artshop. <br> Currently, I'm learning JavaScript and
-            <br>plan to integrate backend and MySQL for this art shop website.</p>
+        <p>I'm Manoj K, an Electrical and Electronics Engineering student with intermediate coding skills and experience in web design and app development. I've developed projects like an Amazon clone and an e-commerce site named Artshop. Currently, I'm learning JavaScript and plan to integrate backend and MySQL for this art shop website.</p>
     </section>
     <hr>
     <hr>
-<br>
-<br>
+
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
@@ -111,7 +104,6 @@
     </section>
     <hr>
     <hr>
-    <br>
 
     <!-- Skills Section -->
     <section id="skills">
@@ -119,7 +111,7 @@
         <ul>
             <li>HTML & CSS</li>
             <li>JavaScript</li>
-            <li>Git and GitHup</li>
+            <li>Git and GitHub</li>
             <li>API</li>
             <li>MySQL</li>
         </ul>
@@ -131,145 +123,82 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <p>If you'd like to connect, feel free to reach out!</p>
-        
-    <style>
-        /* Modal styles */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            justify-content: center;
-            align-items: center;
-        }
 
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 300px;
-            text-align: center;
-        }
+        <section>
+            <a href="manoj934547@gmail.com" class="btn" id="mailButton">Send Email</a>
+        </section>
 
-        .modal-content h3 {
-            margin: 0 0 15px;
-        }
+        <!-- Email Modal Structure -->
+        <div class="modal" id="emailConfirmationModal">
+            <div class="modal-content">
+                <h3>Confirm Email</h3>
+                <p>Are you sure you want to send an email to example@mail.com?</p>
+                <button class="confirm" id="confirmMail">Yes</button>
+                <button class="cancel" id="cancelMail">No</button>
+            </div>
+        </div>
 
-        .modal-content button {
-            padding: 10px 15px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+        <!-- Call Button -->
+        <a href="tel:+916374539170" class="btn" id="callButton">Call +91</a>
 
-        .confirm {
-            background-color: #28a745;
-            color: white;
-        }
-
-        .confirm:hover {
-            background-color: #218838;
-        }
-
-        .cancel {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        .cancel:hover {
-            background-color: #c82333;
-        }
-    </style>
-
-
-<section>
-    <a href="manoj934547@gmail.com" class="btn" id="mailButton">Send Email</a>
-</section>
-
-<!-- Modal Structure -->
-<div class="modal" id="emailConfirmationModal">
-    <div class="modal-content">
-        <h3>Confirm Email</h3>
-        <p>Are you sure you want to send an email to example@mail.com?</p>
-        <button class="confirm" id="confirmMail">Yes</button>
-        <button class="cancel" id="cancelMail">No</button>
-    </div>
-</div>
-
-<script>
-    // JavaScript to handle modal behavior
-    const mailButton = document.getElementById('mailButton');
-    const emailModal = document.getElementById('emailConfirmationModal');
-    const confirmMail = document.getElementById('confirmMail');
-    const cancelMail = document.getElementById('cancelMail');
-
-    mailButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent default link behavior
-        emailModal.style.display = 'flex'; // Show the modal
-    });
-
-    confirmMail.addEventListener('click', () => {
-        emailModal.style.display = 'none'; // Hide the modal
-        window.location.href = 'mailto:example@mail.com'; // Open the email client
-    });
-
-    cancelMail.addEventListener('click', () => {
-        emailModal.style.display = 'none'; // Hide the modal
-    });
-</script>
-
-
-<br>
-<br>
-
-
- <a href="tel:+916374539170" class="btn" id="callButton" >Call +91</a>
-
-
+        <!-- Call Modal Structure -->
+        <div class="modal" id="confirmationModal">
+            <div class="modal-content">
+                <h3>Confirm Call</h3>
+                <p>Are you sure you want to call +91 000000?</p>
+                <button class="confirm" id="confirmCall">Yes</button>
+                <button class="cancel" id="cancelCall">No</button>
+            </div>
+        </div>
     </section>
-<div class="modal" id="confirmationModal">
-    <div class="modal-content">
-        <h3>Confirm Call</h3>
-        <p>Are you sure you want to call +91 000000?</p>
-        <button class="confirm" id="confirmCall">Yes</button>
-        <button class="cancel" id="cancelCall">No</button>
-    </div>
-<script>
-    // JavaScript to handle modal behavior
-    const callButton = document.getElementById('callButton');
-    const modal = document.getElementById('confirmationModal');
-    const confirmCall = document.getElementById('confirmCall');
-    const cancelCall = document.getElementById('cancelCall');
+    <hr>
+    <hr>
 
-    callButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent default link behavior
-        modal.style.display = 'flex'; // Show the modal
-    });
-
-    confirmCall.addEventListener('click', () => {
-        modal.style.display = 'none'; // Hide the modal
-        window.location.href = 'tel:+91000000'; // Initiate the call
-    });
-
-    cancelCall.addEventListener('click', () => {
-        modal.style.display = 'none'; // Hide the modal
-    });
-</script>
-
-<br>
-<hr>
-<hr>
-<br>
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Manoj K. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript to handle modal behavior for email
+        const mailButton = document.getElementById('mailButton');
+        const emailModal = document.getElementById('emailConfirmationModal');
+        const confirmMail = document.getElementById('confirmMail');
+        const cancelMail = document.getElementById('cancelMail');
+
+        mailButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
+            emailModal.style.display = 'flex'; // Show the modal
+        });
+
+        confirmMail.addEventListener('click', () => {
+            emailModal.style.display = 'none'; // Hide the modal
+            window.location.href = 'mailto:example@mail.com'; // Open the email client
+        });
+
+        cancelMail.addEventListener('click', () => {
+            emailModal.style.display = 'none'; // Hide the modal
+        });
+
+        // JavaScript to handle modal behavior for call
+        const callButton = document.getElementById('callButton');
+        const callModal = document.getElementById('confirmationModal');
+        const confirmCall = document.getElementById('confirmCall');
+        const cancelCall = document.getElementById('cancelCall');
+
+        callButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
+            callModal.style.display = 'flex'; // Show the modal
+        });
+
+        confirmCall.addEventListener('click', () => {
+            callModal.style.display = 'none'; // Hide the modal
+            window.location.href = 'tel:+91000000'; // Initiate the call
+        });
+
+        cancelCall.addEventListener('click', () => {
+            callModal.style.display = 'none'; // Hide the modal
+        });
+    </script>
 </body>
 </html>
