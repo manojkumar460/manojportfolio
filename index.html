@@ -6,6 +6,62 @@
     <title>Manoj K's Portfolio</title>
     <link rel="stylesheet" href="static\css\style.css">
      <link rel="icon" href="static/data/logo2.jpg" type="image/jpeg">
+    <style>
+
+
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .modal-content h3 {
+            margin: 0 0 15px;
+        }
+
+        .modal-content button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .confirm {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .confirm:hover {
+            background-color: #218838;
+        }
+
+        .cancel {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .cancel:hover {
+            background-color: #c82333;
+        }
+    </style>
 </head>
 <body>
 
@@ -80,8 +136,39 @@
 <br>
 
 
- <a href="tel:+916374539170" class="btn" >Call +91</a>
+ <a href="tel:+916374539170" class="btn" id="callButton" >Call +91</a>
+
+
     </section>
+<div class="modal" id="confirmationModal">
+    <div class="modal-content">
+        <h3>Confirm Call</h3>
+        <p>Are you sure you want to call +91 000000?</p>
+        <button class="confirm" id="confirmCall">Yes</button>
+        <button class="cancel" id="cancelCall">No</button>
+    </div>
+<script>
+    // JavaScript to handle modal behavior
+    const callButton = document.getElementById('callButton');
+    const modal = document.getElementById('confirmationModal');
+    const confirmCall = document.getElementById('confirmCall');
+    const cancelCall = document.getElementById('cancelCall');
+
+    callButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        modal.style.display = 'flex'; // Show the modal
+    });
+
+    confirmCall.addEventListener('click', () => {
+        modal.style.display = 'none'; // Hide the modal
+        window.location.href = 'tel:+91000000'; // Initiate the call
+    });
+
+    cancelCall.addEventListener('click', () => {
+        modal.style.display = 'none'; // Hide the modal
+    });
+</script>
+
 <br>
 <hr>
 <hr>
