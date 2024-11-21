@@ -137,7 +137,7 @@ section:hover {
     margin-left: 20%;
     font-size: 18px;
 }
-#about p{
+#about{
 
 
      width: 80%;
@@ -147,6 +147,13 @@ section:hover {
     color: #555;
     font-size: 18px;
      margin-left: 10%;
+}
+#about p{
+
+
+     
+    font-size: 18px;
+     
 }
 
 
