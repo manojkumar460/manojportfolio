@@ -138,22 +138,20 @@ section:hover {
     font-size: 18px;
 }
 #about p{
-overflow-y:scroll;
+
 
      width: 70%;
-     height: 160px;
+     height: auto;
     border: 2px solid;
     border-radius: 4px;
     color: #555;
     font-size: 18px;
-     margin-left: 20%;
+     margin-left: 15%;
 }
-#about::-webkit-scrollbar{
-  
-    display: none;
-}
+
+
 #about p:hover{
-   background-color: #dfdfdf;
+   
    opacity: 2;
    
    
